@@ -6,19 +6,8 @@ using System.Threading.Tasks;
 
 namespace D4DJ_Tools.Masters
 {
-    public static class MasterTypes
+    public static partial class MasterTypes
     {
-        private static Dictionary<string, Type> specialTypes = new Dictionary<string, Type>
-        {
-            { "ChartAchieveMaster", typeof(Dictionary<(int, ChartAchieveType, int), ChartAchieveMaster>) },
-            { "ChartLessonMaster", typeof(Dictionary<(int, int), ChartLessonMaster>) },
-            { "ChartNoteCountMaster", typeof(Dictionary<(int, ChartSectionType), ChartNoteCountMaster>) },
-            { "ClubItemDetailMaster", typeof(Dictionary<(int, int), ClubItemDetailMaster>) },
-            { "CommonTextMaster", typeof(Dictionary<CommonTextType, CommonTextMaster>) },
-            { "CommonValueMaster", typeof(Dictionary<CommonValueType, CommonValueMaster>) },
-
-        };
-
         public static Type GetDeserializeType(string name)
         {
             if (specialTypes.ContainsKey(name))

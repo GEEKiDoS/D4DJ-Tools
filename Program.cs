@@ -62,13 +62,13 @@ namespace D4DJ_Tools
                     Console.WriteLine($"Success.");
                 }
                 // Dump Resource List
-                else if(fileInfo.Name.EndsWith("ResourceList.msgpack"))
+                else if (fileInfo.Name.EndsWith("ResourceList.msgpack"))
                 {
                     Console.WriteLine($"Dumping {fileInfo.Name} into json...");
 
                     var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
                     var result = MessagePackSerializer.Deserialize<Dictionary<string, int>>(
-                        File.ReadAllBytes(fileInfo.FullName), 
+                        File.ReadAllBytes(fileInfo.FullName),
                         options
                     );
 
@@ -84,13 +84,13 @@ namespace D4DJ_Tools
 
         static void Main(string[] args)
         {
-            foreach(var arg in args)
+            foreach (var arg in args)
             {
-                if(Directory.Exists(arg))
+                if (Directory.Exists(arg))
                 {
                     ProcessFileSystemEntry(new DirectoryInfo(arg));
                 }
-                else if(File.Exists(arg))
+                else if (File.Exists(arg))
                 {
                     ProcessFileSystemEntry(new FileInfo(arg));
                 }
