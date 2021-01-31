@@ -1,5 +1,5 @@
 # D4DJ Tools
-A tool(actually not 's') for process D4DJ files
+A tool(actually not 's') for processing D4DJ files
 # Features
 - Decrypt .enc files
 - Dump (some of) Master.msgpack.enc files into json
