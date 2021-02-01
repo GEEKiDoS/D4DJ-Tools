@@ -24,6 +24,26 @@ namespace D4DJ_Tools
             };
         }
 
+        public static byte[] Encrypt(byte[] input)
+        {
+            byte[] encrypted;
+
+            using(var ms = new MemoryStream())
+            {
+                using(var cs = new CryptoStream(ms, aes.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cs.Write(new byte[16]);
+                    cs.Write(input);
+
+                    cs.FlushFinalBlock();
+
+                    encrypted = ms.ToArray();
+                }
+            }
+
+            return encrypted;
+        }
+
         public static byte[] Decrypt(Stream input)
         {
             byte[] decrypted = new byte[input.Length - 16];

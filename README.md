@@ -4,6 +4,7 @@ A tool(actually not 's') for processing D4DJ files
 - Decrypt .enc files
 - Dump (mostly) Master.msgpack.enc files into json
 - Dump ResourceList.msgpack into json
+- Dump charts
 
 ## Usage
 - Drag files or directories on to this tools
