@@ -162,7 +162,7 @@ using (StreamReader sr = new("dump.cs"))
 }
 
 StringBuilder codeBuilder = new();
-codeBuilder.AppendLine("using System;\r\nusing System.Collections.Generic;\r\nnamespace D4DJ_Tools.Masters\r\n{");
+codeBuilder.AppendLine("using System;\r\nusing System.Collections.Generic;\r\n\r\nnamespace D4DJ_Tools.Masters\r\n{");
 codeBuilder.AppendLine("\tpublic static partial class MasterTypes\r\n\t{");
 codeBuilder.AppendLine("\t\tprivate static Dictionary<string, Type> specialTypes = new Dictionary<string, Type>\r\n\t\t{");
 
@@ -179,16 +179,16 @@ foreach(var masterType in masterTypes)
 codeBuilder.AppendLine("\t\t};\r\n\t}\r\n}");
 var typeCode = codeBuilder.ToString();
 
-if (Directory.Exists("../Generated"))
-    Directory.Delete("../Generated", true);
+if (Directory.Exists("../D4DJ.Types/CodeGen"))
+    Directory.Delete("../D4DJ.Types/CodeGen", true);
 
-Directory.CreateDirectory("../Generated");
-File.WriteAllText("../Generated/D4DJEnums.cs", enumCode);
-File.WriteAllText("../Generated/MasterTypes.Generated.cs", typeCode);
+Directory.CreateDirectory("../D4DJ.Types/CodeGen");
+File.WriteAllText("../D4DJ.Types/CodeGen/D4DJEnums.cs", enumCode);
+File.WriteAllText("../D4DJ.Types/CodeGen/MasterTypes.Generated.cs", typeCode);
 
-Directory.CreateDirectory("../Generated/Masters");
+Directory.CreateDirectory("../D4DJ.Types/CodeGen/Masters");
 
 foreach(var master in foundedMasters)
 {
-    File.WriteAllText($"../Generated/Masters/{master.Key}.cs", master.Value);
+    File.WriteAllText($"../D4DJ.Types/CodeGen/Masters/{master.Key}.cs", master.Value);
 }

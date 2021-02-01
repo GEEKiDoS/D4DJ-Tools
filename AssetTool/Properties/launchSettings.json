@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AssetTool": {
+      "commandName": "Project",
+      "commandLineArgs": "MusicMaster.msgpack.enc"
+    }
+  }
+}

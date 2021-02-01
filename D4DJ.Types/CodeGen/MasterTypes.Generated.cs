@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 namespace D4DJ_Tools.Masters
 {
 	public static partial class MasterTypes

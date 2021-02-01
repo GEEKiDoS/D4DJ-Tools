@@ -197,6 +197,9 @@ namespace D4DJ_Tools
                     ProcessFileSystemEntry(new FileInfo(arg));
                 }
             }
+
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }

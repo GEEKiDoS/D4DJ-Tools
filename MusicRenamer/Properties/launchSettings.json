@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "MusicRenamer": {
+      "commandName": "Project",
+      "commandLineArgs": "\"I:\\D4DJ Unpack\\MusicMaster.json\" \"I:\\D4DJ Unpack\\UnitMaster.json\" \"I:\\D4DJ Unpack\\output\""
+    }
+  }
+}
