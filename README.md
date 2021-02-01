@@ -2,7 +2,7 @@
 A tool(actually not 's') for processing D4DJ files
 # Features
 - Decrypt .enc files
-- Dump (some of) Master.msgpack.enc files into json
+- Dump (mostly) Master.msgpack.enc files into json
 - Dump ResourceList.msgpack into json
 
 ## Usage
