@@ -117,24 +117,6 @@ namespace D4DJ_Tools
                             Console.WriteLine($"Failed to dump chart: {ex.Message}");
                         }
                     }
-                    else if (fileInfo.Name.EndsWith("ResourceList.msgpack"))
-                    {
-                        try
-                        {
-                            var result = DeserializeMsgPack<Dictionary<string, int>>(decrypted);
-
-                            File.WriteAllText(
-                                fileInfo.FullName.Replace(".enc", ".json"),
-                                DumpToJson(result)
-                            );
-
-                            success = true;
-                        }
-                        catch(Exception ex)
-                        {
-                            Console.WriteLine($"Failed to dump resource list: {ex.Message}");
-                        }
-                    }
 
                     if (!success)
                     {
@@ -144,11 +126,60 @@ namespace D4DJ_Tools
 
                     Console.WriteLine($"Success!");
                 }
+                else if (fileInfo.Name.EndsWith("ResourceList.msgpack"))
+                {
+                    try
+                    {
+                        var result = DeserializeMsgPack<Dictionary<string, int>>(File.ReadAllBytes(fileInfo.FullName));
+
+                        File.WriteAllText(
+                            fileInfo.FullName.Replace(".msgpack", ".json"),
+                            DumpToJson(result)
+                        );
+
+                        Console.WriteLine($"Success!");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to dump resource list: {ex.Message}");
+                    }
+                }
+                else if (fileInfo.Name.EndsWith("ResourceList.json"))
+                {
+                    try
+                    {
+                        var result = SerializeMsgPack(
+                            JsonConvert.DeserializeObject<Dictionary<string, int>>(
+                                File.ReadAllText(fileInfo.FullName)
+                            )
+                        );
+
+                        File.WriteAllBytes(
+                            fileInfo.FullName.Replace(".json", ".msgpack"),
+                            result
+                        );
+
+                        Console.WriteLine($"Success!");
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to dump resource list: {ex.Message}");
+                    }
+                }
                 // Encrypt master back
                 else if(fileInfo.Name.EndsWith("Master.json"))
                 {
                     Console.WriteLine($"Encrypting {fileInfo.Name}...");
                     EncryptMaster(fileInfo);
+                }
+                else
+                {
+                    Console.WriteLine($"Encrypting {fileInfo.Name}...");
+
+                    File.WriteAllBytes(
+                        fileInfo.FullName + ".enc",
+                        AssetDecryptor.Encrypt(File.ReadAllBytes(fileInfo.FullName))
+                    );
                 }
             }
         }
