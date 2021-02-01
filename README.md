@@ -1,14 +1,21 @@
 # D4DJ Tools
-A tool(actually not 's') for processing D4DJ files
-# Features
+Tools for processing D4DJ files
+## AssetTool
 - Decrypt .enc files
 - Dump (mostly) Master.msgpack.enc files into json
 - Dump ResourceList.msgpack into json
 - Dump charts
 
-## Usage
+### Usage
 - Drag files or directories on to this tools
 - Profit
+
+## MusicRenamer
+- Rename music_XXXXXXX.mp3 to real name and add infomations
+
+### Usage
+- Dump MusicMaster and UnitMaster to json with AssetTool
+- ```MusicRenamer.exe <MusicMaster.json> <UnitMaster.json> [mp3 files to rename]```
 
 ## Requirements
 - .NET 5.0 (Actually change to older versions should works too, but we just love newer version don't we?)
