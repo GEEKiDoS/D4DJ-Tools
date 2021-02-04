@@ -117,6 +117,19 @@ namespace D4DJ_Tools
                             Console.WriteLine($"Failed to dump chart: {ex.Message}");
                         }
                     }
+                    else if(fileInfo.Name.EndsWith("ResourceList.msgpack.enc"))
+                    {
+                        Console.WriteLine($"Dumping ResourceList...");
+
+                        var result = DeserializeMsgPack<Dictionary<string, (int, int)>>(decrypted);
+
+                        File.WriteAllText(
+                            fileInfo.FullName.Replace(".msgpack.enc", ".json"),
+                            DumpToJson(result)
+                        );
+
+                        success = true;
+                    }
 
                     if (!success)
                     {
@@ -128,6 +141,7 @@ namespace D4DJ_Tools
                 }
                 else if (fileInfo.Name.EndsWith("ResourceList.msgpack"))
                 {
+                    
                     try
                     {
                         var result = DeserializeMsgPack<Dictionary<string, int>>(File.ReadAllBytes(fileInfo.FullName));

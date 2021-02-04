@@ -17,6 +17,12 @@ Tools for processing D4DJ files
 - Dump MusicMaster and UnitMaster to json with AssetTool
 - ```MusicRenamer.exe <MusicMaster.json> <UnitMaster.json> [mp3 files to rename]```
 
+## Chart Previewer
+Link: [Chart Previewer](http://girlbands.party/d4dj/chart-previewer/)
+
+## Usage
+- Open chart that dumped by asset tool
+
 ## Requirements
 - .NET 5.0 (Actually change to older versions should works too, but we just love newer version don't we?)
 

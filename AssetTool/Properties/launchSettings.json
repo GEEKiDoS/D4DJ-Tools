@@ -2,7 +2,7 @@
   "profiles": {
     "AssetTool": {
       "commandName": "Project",
-      "commandLineArgs": "MusicMaster.msgpack.enc"
+      "commandLineArgs": "iOSResourceList.msgpack.enc"
     }
   }
 }
