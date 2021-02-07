@@ -4,7 +4,7 @@ Tools for processing D4DJ files
 - Decrypt .enc files
 - Dump (mostly) Master.msgpack.enc files into json
 - Dump ResourceList.msgpack into json
-- Dump charts
+- Dump/Encoding charts
 
 ### Usage
 - Drag files or directories on to this tools
@@ -18,10 +18,14 @@ Tools for processing D4DJ files
 - ```MusicRenamer.exe <MusicMaster.json> <UnitMaster.json> [mp3 files to rename]```
 
 ## Chart Previewer
-Link: [Chart Previewer](http://girlbands.party/d4dj/chart-previewer/)
+Link: [Chart Previewer](https://girlbands.party/d4dj/chart-previewer/)
 
-## Usage
+### Usage
 - Open chart that dumped by asset tool
+
+## Chart Editor
+- Modified from bangbangboom editor
+Link: [Chart Editor](https://girlbands.party/d4dj/editor/)
 
 ## Requirements
 - .NET 5.0 (Actually change to older versions should works too, but we just love newer version don't we?)
