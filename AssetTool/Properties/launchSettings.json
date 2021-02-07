@@ -2,7 +2,7 @@
   "profiles": {
     "AssetTool": {
       "commandName": "Project",
-      "commandLineArgs": "iOSResourceList.msgpack.enc"
+      "commandLineArgs": "chart_00000014.json"
     }
   }
 }

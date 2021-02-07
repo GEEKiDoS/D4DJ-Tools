@@ -18,19 +18,24 @@ namespace D4DJ_Tools
             var typeName = inputFile.Name.Replace(".msgpack.enc", "");
             var targetType = MasterTypes.GetDeserializeType(typeName);
 
+            var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
+
             if (targetType == null)
             {
                 Console.WriteLine($"Not supported master {typeName}.");
-                return false;
+                File.WriteAllText(
+                    inputFile.FullName.Replace(".msgpack.enc", ".json"),
+                    MessagePackSerializer.ConvertToJson(decrypted, options)
+                );
             }
-
-            var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
-            var result = MessagePackSerializer.Deserialize(targetType, decrypted, options);
-
-            File.WriteAllText(
-                inputFile.FullName.Replace(".msgpack.enc", ".json"),
-                DumpToJson(result)
-            );
+            else
+            {
+                var result = MessagePackSerializer.Deserialize(targetType, decrypted, options);
+                File.WriteAllText(
+                    inputFile.FullName.Replace(".msgpack.enc", ".json"),
+                    DumpToJson(result)
+                );
+            }
 
             return true;
         }
@@ -64,7 +69,7 @@ namespace D4DJ_Tools
             }
 
             var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
-            var result = JsonConvert.DeserializeObject(File.ReadAllText(inputFile.FullName), targetType);
+            var result = JsonConvert.DeserializeObject(File.ReadAllText(inputFile.FullName), targetType, new SBConverterIntInt<ChartLessonMaster>());
             var output = MessagePackSerializer.Serialize(result, options);
             var encrypted = AssetDecryptor.Encrypt(output);
 
@@ -80,7 +85,7 @@ namespace D4DJ_Tools
             }
             else if (fileSystemInfo is FileInfo fileInfo)
             {
-                if(fileInfo.Extension == ".enc")
+                if (fileInfo.Extension == ".enc")
                 {
                     Console.WriteLine($"Decrypting {fileInfo.Name}...");
                     var decrypted = AssetDecryptor.Decrypt(fileInfo.OpenRead());
@@ -100,11 +105,13 @@ namespace D4DJ_Tools
                             object result = null;
 
                             // Check if this is chart common data
-                            if(fileInfo.Name.EndsWith("0.enc"))
-                                result= DeserializeMsgPack<ChartCommonData>(decrypted);
+                            if (fileInfo.Name.EndsWith("0.enc"))
+                                result = DeserializeMsgPack<ChartCommonData>(decrypted);
                             else
                                 result = DeserializeMsgPack<ChartData>(decrypted);
- 
+
+                            var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
+
                             File.WriteAllText(
                                 fileInfo.FullName.Replace(".enc", ".json"),
                                 DumpToJson(result)
@@ -112,12 +119,12 @@ namespace D4DJ_Tools
 
                             success = true;
                         }
-                        catch(Exception ex)
+                        catch (Exception ex)
                         {
                             Console.WriteLine($"Failed to dump chart: {ex.Message}");
                         }
                     }
-                    else if(fileInfo.Name.EndsWith("ResourceList.msgpack.enc"))
+                    else if (fileInfo.Name.EndsWith("ResourceList.msgpack.enc"))
                     {
                         Console.WriteLine($"Dumping ResourceList...");
 
@@ -141,7 +148,7 @@ namespace D4DJ_Tools
                 }
                 else if (fileInfo.Name.EndsWith("ResourceList.msgpack"))
                 {
-                    
+
                     try
                     {
                         var result = DeserializeMsgPack<Dictionary<string, int>>(File.ReadAllBytes(fileInfo.FullName));
@@ -181,10 +188,36 @@ namespace D4DJ_Tools
                     }
                 }
                 // Encrypt master back
-                else if(fileInfo.Name.EndsWith("Master.json"))
+                else if (fileInfo.Name.EndsWith("Master.json"))
                 {
                     Console.WriteLine($"Encrypting {fileInfo.Name}...");
                     EncryptMaster(fileInfo);
+                }
+                else if(fileInfo.Name.StartsWith("chart") && fileInfo.Extension == ".json")
+                {
+                    Console.WriteLine("Encrypting chart...");
+
+                    try
+                    {
+                        var json = File.ReadAllText(fileInfo.FullName);
+
+                        object result = null;
+
+                        // Check if this is chart common data
+                        if (fileInfo.Name.EndsWith("0.json"))
+                            result = JsonConvert.DeserializeObject<ChartCommonData>(json);
+                        else
+                            result = JsonConvert.DeserializeObject<ChartData>(json);
+
+                        File.WriteAllBytes(
+                            fileInfo.FullName.Replace(".json", ".enc"),
+                            AssetDecryptor.Encrypt(SerializeMsgPack(result))
+                        );
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Failed to dump chart: {ex.Message}");
+                    }
                 }
                 else
                 {

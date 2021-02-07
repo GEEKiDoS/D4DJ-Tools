@@ -36,7 +36,7 @@ namespace AssetDownloader
                 if (file.StartsWith("plain"))
                     ext = "";
 
-                if (File.Exists($"assets/{file}{ext}"))
+                if (File.Exists($"assets/{file}{ext}") || !file.Contains("MusicMaster"))
                     continue;
 
                 Console.WriteLine($"Downloading {file}");

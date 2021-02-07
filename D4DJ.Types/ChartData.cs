@@ -37,12 +37,24 @@ namespace D4DJ_Tools
     }
 
     [MessagePackObject]
+    public class SoflanData
+    {
+        [Key(0)]
+        public float Time { get; set; }
+        [Key(1)]
+        public float TimeScale { get; set; }
+        [Key(2)]
+        public int LeftRight { get; set; }
+    }
+
+    [MessagePackObject]
     public class ChartData
     {
         [Key(0)]
         public string MusicName { get; set; }
         [Key(1)]
-        public (float, float, int)[] SoflanDataList { get; set; }
+        //public (float, float, int)[] SoflanDataList { get; set; }
+        public SoflanData[] SoflanDataList { get; set; }
         [Key(2)]
         public float[] BarLineList { get; set; }
         [Key(3)]

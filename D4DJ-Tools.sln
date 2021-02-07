@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D4DJ.Types", "D4DJ.Types\D4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicRenamer", "MusicRenamer\MusicRenamer.csproj", "{9EBF88C9-1671-4B07-92AF-8166DF8643BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssetDownloader", "AssetDownloader\AssetDownloader.csproj", "{628D6092-2307-49F0-BEF1-58198B9B65E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssetDownloader", "AssetDownloader\AssetDownloader.csproj", "{628D6092-2307-49F0-BEF1-58198B9B65E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
