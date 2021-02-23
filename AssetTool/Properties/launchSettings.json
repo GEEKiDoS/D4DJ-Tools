@@ -2,7 +2,7 @@
   "profiles": {
     "AssetTool": {
       "commandName": "Project",
-      "commandLineArgs": "chart_00000014.json"
+      "commandLineArgs": "MusicMaster.msgpack.enc"
     }
   }
 }

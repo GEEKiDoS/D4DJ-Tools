@@ -13,13 +13,15 @@ namespace D4DJ_Tools.Masters
 		[Key(2)]
 		public int MaxRecoveryValue { get; set; }
 		[Key(3)]
-		public int JudgeExpandValue { get; set; }
+		public int ComboSupportCount { get; set; }
 		[Key(4)]
 		public int ScoreUpRate { get; set; }
 		[Key(5)]
 		public float MinSeconds { get; set; }
 		[Key(6)]
 		public float MaxSeconds { get; set; }
+		[Key(7)]
+		public int PerfectScoreUpRate { get; set; }
 	}
 }
 

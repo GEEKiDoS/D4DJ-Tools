@@ -18,8 +18,6 @@ namespace D4DJ_Tools
             {
                 Mode = CipherMode.CBC,
                 Padding = PaddingMode.PKCS7,
-                KeySize = 128,
-                BlockSize = 128,
                 Key = Convert.FromBase64String("5Mp78iBLX9gVvDjWGCqfbzRHS7hK3JiR")
             };
         }

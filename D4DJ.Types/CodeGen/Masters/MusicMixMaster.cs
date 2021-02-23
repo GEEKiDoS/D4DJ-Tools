@@ -18,6 +18,10 @@ namespace D4DJ_Tools.Masters
 		public float EndTime { get; set; }
 		[Key(5)]
 		public float EndTimeBpm { get; set; }
+		[Key(6)]
+		public bool EnableLongMixStart { get; set; }
+		[Key(7)]
+		public bool EnableLongMixEnd { get; set; }
 	}
 }
 

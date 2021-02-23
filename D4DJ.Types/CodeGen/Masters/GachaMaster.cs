@@ -48,6 +48,8 @@ namespace D4DJ_Tools.Masters
 		public int AscendingSortId { get; set; }
 		[Key(20)]
 		public GachaType Type { get; set; }
+		[Key(21)]
+		public int BonusStockId { get; set; }
 	}
 }
 

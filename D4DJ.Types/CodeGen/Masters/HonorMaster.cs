@@ -14,6 +14,10 @@ namespace D4DJ_Tools.Masters
 		public string Name { get; set; }
 		[Key(3)]
 		public string Description { get; set; }
+		[Key(4)]
+		public int[] DuplicateStockIds { get; set; }
+		[Key(5)]
+		public int[] DuplicateStockAmounts { get; set; }
 	}
 }
 

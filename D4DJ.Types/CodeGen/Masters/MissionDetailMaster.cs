@@ -24,6 +24,8 @@ namespace D4DJ_Tools.Masters
 		public int[] __RewardsPrimaryKey__ { get; set; }
 		[Key(8)]
 		public int __CommandMasterPrimaryKey__ { get; set; }
+		[Key(9)]
+		public int HomePriority { get; set; }
 	}
 }
 

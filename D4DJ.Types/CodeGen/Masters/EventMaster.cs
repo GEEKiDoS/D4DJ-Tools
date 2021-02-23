@@ -36,6 +36,14 @@ namespace D4DJ_Tools.Masters
 		public CardIllustType DisplayCardType { get; set; }
 		[Key(14)]
 		public DateTime StoryUnlockDate { get; set; }
+		[Key(15)]
+		public bool ShowExchangeButton { get; set; }
+		[Key(16)]
+		public int ExchangeShopId { get; set; }
+		[Key(17)]
+		public bool IsD4FesStory { get; set; }
+		[Key(18)]
+		public string TopPrefabPath { get; set; }
 	}
 }
 

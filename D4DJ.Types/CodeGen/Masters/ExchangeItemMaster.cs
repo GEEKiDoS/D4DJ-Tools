@@ -11,40 +11,38 @@ namespace D4DJ_Tools.Masters
 		[Key(1)]
 		public int __ExchangePrimaryKey__ { get; set; }
 		[Key(2)]
-		public int _unused { get; set; }
-		[Key(3)]
 		public RewardCategory RewardCategory { get; set; }
-		[Key(4)]
+		[Key(3)]
 		public int RewardId { get; set; }
-		[Key(5)]
+		[Key(4)]
 		public int RewardAmount { get; set; }
-		[Key(6)]
+		[Key(5)]
 		public int ExchangeCount { get; set; }
-		[Key(7)]
+		[Key(6)]
 		public DateSelectCategory ResetType { get; set; }
-		[Key(8)]
+		[Key(7)]
 		public int ResetValue { get; set; }
-		[Key(9)]
+		[Key(8)]
 		public bool Recommend { get; set; }
-		[Key(10)]
+		[Key(9)]
 		public DateTime StartDate { get; set; }
-		[Key(11)]
+		[Key(10)]
 		public DateTime EndDate { get; set; }
-		[Key(12)]
+		[Key(11)]
 		public int RequiredStockId1 { get; set; }
-		[Key(13)]
+		[Key(12)]
 		public int RequiredAmount1 { get; set; }
-		[Key(14)]
+		[Key(13)]
 		public int RequiredStockId2 { get; set; }
-		[Key(15)]
+		[Key(14)]
 		public int RequiredAmount2 { get; set; }
-		[Key(16)]
+		[Key(15)]
 		public int RequiredStockId3 { get; set; }
-		[Key(17)]
+		[Key(16)]
 		public int RequiredAmount3 { get; set; }
-		[Key(18)]
+		[Key(17)]
 		public int RequiredStockId4 { get; set; }
-		[Key(19)]
+		[Key(18)]
 		public int RequiredAmount4 { get; set; }
 	}
 }

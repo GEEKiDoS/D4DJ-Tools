@@ -33,20 +33,18 @@ namespace D4DJ_Tools.Masters
 		[Key(12)]
 		public ChartSectionType SectionTrend { get; set; }
 		[Key(13)]
-		public bool EnableLongMix { get; set; }
-		[Key(14)]
 		public DateTime StartDate { get; set; }
-		[Key(15)]
+		[Key(14)]
 		public DateTime EndDate { get; set; }
-		[Key(16)]
+		[Key(15)]
 		public bool HasMovie { get; set; }
-		[Key(17)]
+		[Key(16)]
 		public int[] __PurchaseBonusesPrimaryKey__ { get; set; }
+		[Key(17)]
+		public bool IsHidden { get; set; }
 		[Key(18)]
-		public int[] __TriggerMusicsPrimaryKey__ { get; set; }
-		[Key(19)]
 		public bool ExcludeChallenge { get; set; }
-		[Key(20)]
+		[Key(19)]
 		public bool IsTutorial { get; set; }
 	}
 }

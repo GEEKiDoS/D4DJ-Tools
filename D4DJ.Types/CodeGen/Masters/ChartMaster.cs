@@ -20,6 +20,8 @@ namespace D4DJ_Tools.Masters
 		public float[] Trends { get; set; }
 		[Key(6)]
 		public string OverrideLevel { get; set; }
+		[Key(7)]
+		public int __DesignerPrimaryKey__ { get; set; }
 	}
 }
 

@@ -69,7 +69,12 @@ namespace D4DJ_Tools
             }
 
             var options = MessagePackSerializerOptions.Standard.WithCompression(MessagePackCompression.Lz4Block);
-            var result = JsonConvert.DeserializeObject(File.ReadAllText(inputFile.FullName), targetType, new SBConverterIntInt<ChartLessonMaster>());
+            var result = JsonConvert.DeserializeObject(
+                File.ReadAllText(inputFile.FullName), 
+                targetType, 
+                new TupleConverterIntInt<ChartLessonMaster>(),
+                new TupleConverterIntEnum<ChartNoteCountMaster, ChartSectionType>()
+            );
             var output = MessagePackSerializer.Serialize(result, options);
             var encrypted = AssetDecryptor.Encrypt(output);
 
