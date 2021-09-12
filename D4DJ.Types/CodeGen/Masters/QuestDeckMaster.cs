@@ -4,16 +4,16 @@ using System;
 namespace D4DJ_Tools.Masters
 {
 	[MessagePackObject]
-	public class GachaTableMaster
+	public class QuestDeckMaster
 	{
 		[Key(0)]
 		public int Id { get; set; }
 		[Key(1)]
-		public int TableId { get; set; }
+		public int Order { get; set; }
 		[Key(2)]
-		public int CardId { get; set; }
+		public int __CardPrimaryKey__ { get; set; }
 		[Key(3)]
-		public int Rate { get; set; }
+		public CardIllustType IllustType { get; set; }
 	}
 }
 

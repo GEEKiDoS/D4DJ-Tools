@@ -22,6 +22,8 @@ namespace D4DJ_Tools.Masters
 		public DateTime StartDate { get; set; }
 		[Key(7)]
 		public DateTime EndDate { get; set; }
+		[Key(8)]
+		public bool HasVoice { get; set; }
 	}
 }
 

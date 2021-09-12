@@ -46,6 +46,8 @@ namespace D4DJ_Tools.Masters
 		public bool ExcludeChallenge { get; set; }
 		[Key(19)]
 		public bool IsTutorial { get; set; }
+		[Key(20)]
+		public bool CanFairUse { get; set; }
 	}
 }
 

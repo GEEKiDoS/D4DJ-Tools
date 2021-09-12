@@ -28,6 +28,8 @@ namespace D4DJ_Tools.Masters
 		public string ForegroundImage { get; set; }
 		[Key(10)]
 		public int[] DatePositions { get; set; }
+		[Key(11)]
+		public int LimitDays { get; set; }
 	}
 }
 

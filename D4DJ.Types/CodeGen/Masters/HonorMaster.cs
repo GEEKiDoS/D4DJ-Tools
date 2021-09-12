@@ -18,6 +18,8 @@ namespace D4DJ_Tools.Masters
 		public int[] DuplicateStockIds { get; set; }
 		[Key(5)]
 		public int[] DuplicateStockAmounts { get; set; }
+		[Key(6)]
+		public int EffectType { get; set; }
 	}
 }
 

@@ -11,8 +11,10 @@ namespace D4DJ_Tools.Masters
 		[Key(1)]
 		public int[] Rates { get; set; }
 		[Key(2)]
-		public string TabName { get; set; }
+		public int[] RarityIds { get; set; }
 		[Key(3)]
+		public string TabName { get; set; }
+		[Key(4)]
 		public string Description { get; set; }
 	}
 }

@@ -7,17 +7,15 @@ namespace D4DJ_Tools.Masters
 	public class TitleDisplayMaster
 	{
 		[Key(0)]
-		public int Id { get; set; }
+		public int CardDisplayGroupId { get; set; }
 		[Key(1)]
-		public int __CardPrimaryKey__ { get; set; }
-		[Key(2)]
-		public CardIllustType CardType { get; set; }
-		[Key(3)]
-		public int Rate { get; set; }
-		[Key(4)]
 		public DateTime StartDate { get; set; }
-		[Key(5)]
+		[Key(2)]
 		public DateTime EndDate { get; set; }
+		[Key(3)]
+		public int TitleBGMCueId { get; set; }
+		[Key(4)]
+		public string TitleVoiceCueName { get; set; }
 	}
 }
 

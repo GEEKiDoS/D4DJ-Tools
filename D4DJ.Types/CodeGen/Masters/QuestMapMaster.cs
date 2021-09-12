@@ -4,20 +4,20 @@ using System;
 namespace D4DJ_Tools.Masters
 {
 	[MessagePackObject]
-	public class OptionPresetMaster
+	public class QuestMapMaster
 	{
 		[Key(0)]
 		public int Id { get; set; }
 		[Key(1)]
 		public string Name { get; set; }
 		[Key(2)]
-		public string Description { get; set; }
+		public DateTime StartDate { get; set; }
 		[Key(3)]
-		public string Data { get; set; }
+		public DateTime EndDate { get; set; }
 		[Key(4)]
-		public bool IsSelectable { get; set; }
+		public int MaxPlayableCount { get; set; }
 		[Key(5)]
-		public string DataDescription { get; set; }
+		public string BGM { get; set; }
 	}
 }
 

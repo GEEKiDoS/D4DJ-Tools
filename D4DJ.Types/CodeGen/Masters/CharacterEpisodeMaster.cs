@@ -4,16 +4,16 @@ using System;
 namespace D4DJ_Tools.Masters
 {
 	[MessagePackObject]
-	public class BingoVoiceMaster
+	public class CharacterEpisodeMaster
 	{
 		[Key(0)]
 		public int Id { get; set; }
 		[Key(1)]
-		public int CharacterId { get; set; }
+		public int BackgroundId { get; set; }
 		[Key(2)]
-		public BingoStatusCategory BingoStatus { get; set; }
+		public int CharacterId { get; set; }
 		[Key(3)]
-		public int AchieveNum { get; set; }
+		public int ChapterNumber { get; set; }
 	}
 }
 

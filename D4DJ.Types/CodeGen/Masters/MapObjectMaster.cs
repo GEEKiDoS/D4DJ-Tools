@@ -18,6 +18,18 @@ namespace D4DJ_Tools.Masters
 		public DateTime StartDate { get; set; }
 		[Key(5)]
 		public DateTime EndDate { get; set; }
+		[Key(6)]
+		public string ButtonText1 { get; set; }
+		[Key(7)]
+		public string ButtonHref1 { get; set; }
+		[Key(8)]
+		public string ButtonText2 { get; set; }
+		[Key(9)]
+		public string ButtonHref2 { get; set; }
+		[Key(10)]
+		public string ButtonText3 { get; set; }
+		[Key(11)]
+		public string ButtonHref3 { get; set; }
 	}
 }
 

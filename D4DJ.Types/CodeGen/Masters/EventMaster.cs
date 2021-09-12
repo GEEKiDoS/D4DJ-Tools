@@ -31,19 +31,19 @@ namespace D4DJ_Tools.Masters
 		[Key(11)]
 		public int[] EpisodeCharacters { get; set; }
 		[Key(12)]
-		public int __DisplayCardPrimaryKey__ { get; set; }
-		[Key(13)]
-		public CardIllustType DisplayCardType { get; set; }
-		[Key(14)]
 		public DateTime StoryUnlockDate { get; set; }
-		[Key(15)]
+		[Key(13)]
 		public bool ShowExchangeButton { get; set; }
-		[Key(16)]
+		[Key(14)]
 		public int ExchangeShopId { get; set; }
-		[Key(17)]
+		[Key(15)]
 		public bool IsD4FesStory { get; set; }
-		[Key(18)]
+		[Key(16)]
 		public string TopPrefabPath { get; set; }
+		[Key(17)]
+		public bool ShowMissionButton { get; set; }
+		[Key(18)]
+		public string BGMPath { get; set; }
 	}
 }
 

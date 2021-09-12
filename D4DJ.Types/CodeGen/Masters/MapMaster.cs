@@ -26,6 +26,8 @@ namespace D4DJ_Tools.Masters
 		public DateTime EndDate { get; set; }
 		[Key(9)]
 		public int ADVBackgroundId { get; set; }
+		[Key(10)]
+		public bool ForceDefaultMap { get; set; }
 	}
 }
 

@@ -9,7 +9,7 @@ namespace D4DJ_Tools.Masters
 		[Key(0)]
 		public int Id { get; set; }
 		[Key(1)]
-		public int CardNumber { get; set; }
+		public int RewardPhaseId { get; set; }
 		[Key(2)]
 		public BingoRewardCategory Category { get; set; }
 		[Key(3)]

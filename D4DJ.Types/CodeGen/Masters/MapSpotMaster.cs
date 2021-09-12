@@ -30,6 +30,10 @@ namespace D4DJ_Tools.Masters
 		public int Position5X { get; set; }
 		[Key(11)]
 		public int Position5Y { get; set; }
+		[Key(12)]
+		public DateTime StartDate { get; set; }
+		[Key(13)]
+		public DateTime EndDate { get; set; }
 	}
 }
 

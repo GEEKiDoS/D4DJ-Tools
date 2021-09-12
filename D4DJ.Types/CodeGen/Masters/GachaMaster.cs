@@ -31,25 +31,33 @@ namespace D4DJ_Tools.Masters
 		[Key(11)]
 		public string[] Live2dBg { get; set; }
 		[Key(12)]
-		public int BonusMaxValue { get; set; }
-		[Key(13)]
-		public int __BonusTableRatePrimaryKey__ { get; set; }
-		[Key(14)]
-		public int[] BonusTableIds { get; set; }
-		[Key(15)]
 		public int LoginTriggerMinutes { get; set; }
-		[Key(16)]
+		[Key(13)]
 		public bool ShowHomeAnimation { get; set; }
-		[Key(17)]
+		[Key(14)]
 		public bool HasPickUpDuplicateBonus { get; set; }
-		[Key(18)]
-		public bool IsTutorial { get; set; }
-		[Key(19)]
+		[Key(15)]
+		public int GachaCardAttribute { get; set; }
+		[Key(16)]
 		public int AscendingSortId { get; set; }
-		[Key(20)]
-		public GachaType Type { get; set; }
-		[Key(21)]
+		[Key(17)]
+		public GachaCategory Category { get; set; }
+		[Key(18)]
 		public int BonusStockId { get; set; }
+		[Key(19)]
+		public int SelectBonusMaxValue { get; set; }
+		[Key(20)]
+		public int[] __SelectBonusCardsPrimaryKey__ { get; set; }
+		[Key(21)]
+		public int[] __SelectBonusRewardsPrimaryKey__ { get; set; }
+		[Key(22)]
+		public int[] PickUpDuplicateBonusStockIds { get; set; }
+		[Key(23)]
+		public int[] PickUpDuplicateBonusStockAmounts { get; set; }
+		[Key(24)]
+		public GachaType Type { get; set; }
+		[Key(25)]
+		public int StepLoopCount { get; set; }
 	}
 }
 

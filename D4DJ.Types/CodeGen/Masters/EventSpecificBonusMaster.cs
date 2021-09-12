@@ -30,6 +30,10 @@ namespace D4DJ_Tools.Masters
 		public int AllMatchParameterBonusId { get; set; }
 		[Key(11)]
 		public int AllMatchParameterBonusValue { get; set; }
+		[Key(12)]
+		public int EventPointParameterBonusId { get; set; }
+		[Key(13)]
+		public int EventPointParameterBonusRate { get; set; }
 	}
 }
 

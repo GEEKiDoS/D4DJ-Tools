@@ -18,6 +18,16 @@ namespace D4DJ_Tools.Masters
 		public int __SpotPrimaryKey__ { get; set; }
 		[Key(5)]
 		public int DetailId { get; set; }
+		[Key(6)]
+		public int[] DuplicateStockIds { get; set; }
+		[Key(7)]
+		public int[] DuplicateStockAmounts { get; set; }
+		[Key(8)]
+		public int ConditionCardId { get; set; }
+		[Key(9)]
+		public DateTime StartDate { get; set; }
+		[Key(10)]
+		public DateTime EndDate { get; set; }
 	}
 }
 

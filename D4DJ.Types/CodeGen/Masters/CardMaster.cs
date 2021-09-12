@@ -36,6 +36,10 @@ namespace D4DJ_Tools.Masters
 		public DateTime StartDate { get; set; }
 		[Key(14)]
 		public DateTime EndDate { get; set; }
+		[Key(15)]
+		public int __PassiveSkillPrimaryKey__ { get; set; }
+		[Key(16)]
+		public int GachaCardAttribute { get; set; }
 	}
 }
 

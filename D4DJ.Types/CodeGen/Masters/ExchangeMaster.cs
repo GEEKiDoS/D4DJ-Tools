@@ -11,13 +11,13 @@ namespace D4DJ_Tools.Masters
 		[Key(1)]
 		public string Name { get; set; }
 		[Key(2)]
-		public DateTime StartDate { get; set; }
-		[Key(3)]
-		public DateTime EndDate { get; set; }
-		[Key(4)]
 		public bool IsTabVisible { get; set; }
-		[Key(5)]
+		[Key(3)]
 		public bool IsPollingPlace { get; set; }
+		[Key(4)]
+		public string CategoryName { get; set; }
+		[Key(5)]
+		public int Order { get; set; }
 	}
 }
 
