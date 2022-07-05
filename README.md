@@ -18,14 +18,14 @@ Tools for processing D4DJ files
 - ```MusicRenamer.exe <MusicMaster.json> <UnitMaster.json> [mp3 files to rename]```
 
 ## Chart Previewer
-Link: [Chart Previewer](https://girlbands.party/d4dj/chart-previewer/)
+Link: [Chart Previewer](https://girlsband.party/d4dj/chart-previewer/)
 
 ### Usage
 - Open chart that dumped by asset tool
 
 ## Chart Editor
 - Modified from bangbangboom editor
-Link: [Chart Editor](https://girlbands.party/d4dj/editor/)
+Link: [Chart Editor](https://girlsband.party/d4dj/editor/)
 
 ## Requirements
 - .NET 5.0 (Actually change to older versions should works too, but we just love newer version don't we?)
