@@ -13,7 +13,7 @@ namespace D4DJ_Tools.Masters
 		[Key(2)]
 		public bool CanTraining { get; set; }
 		[Key(3)]
-		public string Summary { get; set; }
+		public string[] Summaries { get; set; }
 		[Key(4)]
 		public string MainColorCode { get; set; }
 		[Key(5)]

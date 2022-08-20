@@ -44,6 +44,8 @@ namespace D4DJ_Tools.Masters
 		public int RequiredStockId4 { get; set; }
 		[Key(18)]
 		public int RequiredAmount4 { get; set; }
+		[Key(19)]
+		public int[] PrerequisiteItems { get; set; }
 	}
 }
 

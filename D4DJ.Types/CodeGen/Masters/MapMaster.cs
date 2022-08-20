@@ -28,6 +28,8 @@ namespace D4DJ_Tools.Masters
 		public int ADVBackgroundId { get; set; }
 		[Key(10)]
 		public bool ForceDefaultMap { get; set; }
+		[Key(11)]
+		public int HideMapId { get; set; }
 	}
 }
 

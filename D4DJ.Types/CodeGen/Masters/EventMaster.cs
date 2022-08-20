@@ -37,13 +37,15 @@ namespace D4DJ_Tools.Masters
 		[Key(14)]
 		public int ExchangeShopId { get; set; }
 		[Key(15)]
-		public bool IsD4FesStory { get; set; }
-		[Key(16)]
 		public string TopPrefabPath { get; set; }
-		[Key(17)]
+		[Key(16)]
 		public bool ShowMissionButton { get; set; }
-		[Key(18)]
+		[Key(17)]
 		public string BGMPath { get; set; }
+		[Key(18)]
+		public EventEpisodeType EpisodeType { get; set; }
+		[Key(19)]
+		public int BoxGachaId { get; set; }
 	}
 }
 

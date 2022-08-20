@@ -16,6 +16,8 @@ namespace D4DJ_Tools.Masters
 		public int TitleBGMCueId { get; set; }
 		[Key(4)]
 		public string TitleVoiceCueName { get; set; }
+		[Key(5)]
+		public string TitleVoiceCueName2 { get; set; }
 	}
 }
 

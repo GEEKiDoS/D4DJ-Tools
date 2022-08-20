@@ -18,6 +18,18 @@ namespace D4DJ_Tools.Masters
 		public string CategoryName { get; set; }
 		[Key(5)]
 		public int Order { get; set; }
+		[Key(6)]
+		public bool IsSecret { get; set; }
+		[Key(7)]
+		public string SecretName { get; set; }
+		[Key(8)]
+		public int DeliveryEffectId { get; set; }
+		[Key(9)]
+		public DateTime DeliveryDate { get; set; }
+		[Key(10)]
+		public bool ShowPollingGauge { get; set; }
+		[Key(11)]
+		public string[] GaugeColorCodes { get; set; }
 	}
 }
 

@@ -13,7 +13,7 @@ namespace D4DJ_Tools.Masters
 		[Key(2)]
 		public BingoRewardCategory Category { get; set; }
 		[Key(3)]
-		public int MaxAmount { get; set; }
+		public int MaxCount { get; set; }
 		[Key(4)]
 		public RewardCategory RewardCategory { get; set; }
 		[Key(5)]

@@ -16,6 +16,8 @@ namespace D4DJ_Tools.Masters
 		public float MaxValue { get; set; }
 		[Key(4)]
 		public float SubValue { get; set; }
+		[Key(5)]
+		public int BonusCharacterId { get; set; }
 	}
 }
 

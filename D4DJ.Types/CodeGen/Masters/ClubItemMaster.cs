@@ -19,15 +19,17 @@ namespace D4DJ_Tools.Masters
 		[Key(5)]
 		public int DetailId { get; set; }
 		[Key(6)]
-		public int[] DuplicateStockIds { get; set; }
+		public int __CategoryPrimaryKey__ { get; set; }
 		[Key(7)]
-		public int[] DuplicateStockAmounts { get; set; }
-		[Key(8)]
 		public int ConditionCardId { get; set; }
-		[Key(9)]
+		[Key(8)]
 		public DateTime StartDate { get; set; }
-		[Key(10)]
+		[Key(9)]
 		public DateTime EndDate { get; set; }
+		[Key(10)]
+		public int DuplicateId { get; set; }
+		[Key(11)]
+		public string SearchWords { get; set; }
 	}
 }
 

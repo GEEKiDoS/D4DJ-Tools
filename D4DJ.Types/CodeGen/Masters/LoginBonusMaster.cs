@@ -21,15 +21,19 @@ namespace D4DJ_Tools.Masters
 		[Key(6)]
 		public DateTime EndDate { get; set; }
 		[Key(7)]
-		public int SubscriptionId { get; set; }
+		public int PositionId { get; set; }
 		[Key(8)]
-		public string BackgroundImage { get; set; }
+		public int SubscriptionId { get; set; }
 		[Key(9)]
-		public string ForegroundImage { get; set; }
+		public string BackgroundImage { get; set; }
 		[Key(10)]
-		public int[] DatePositions { get; set; }
+		public string ForegroundImage { get; set; }
 		[Key(11)]
+		public int[] DatePositions { get; set; }
+		[Key(12)]
 		public int LimitDays { get; set; }
+		[Key(13)]
+		public int ComebackDays { get; set; }
 	}
 }
 

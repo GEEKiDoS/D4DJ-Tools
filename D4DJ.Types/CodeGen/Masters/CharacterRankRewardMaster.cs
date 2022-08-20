@@ -18,6 +18,10 @@ namespace D4DJ_Tools.Masters
 		public int RewardId { get; set; }
 		[Key(5)]
 		public int Amount { get; set; }
+		[Key(6)]
+		public DateTime StartDate { get; set; }
+		[Key(7)]
+		public DateTime EndDate { get; set; }
 	}
 }
 

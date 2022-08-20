@@ -16,6 +16,8 @@ namespace D4DJ_Tools.Masters
 		public string Description { get; set; }
 		[Key(4)]
 		public bool HasVoice { get; set; }
+		[Key(5)]
+		public int DuplicateId { get; set; }
 	}
 }
 

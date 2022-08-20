@@ -17,10 +17,12 @@ namespace D4DJ_Tools.Masters
 		[Key(4)]
 		public int Affection { get; set; }
 		[Key(5)]
-		public RewardCategory Category { get; set; }
+		public bool IsNoEpisodeOnly { get; set; }
 		[Key(6)]
-		public int RewardId { get; set; }
+		public RewardCategory Category { get; set; }
 		[Key(7)]
+		public int RewardId { get; set; }
+		[Key(8)]
 		public int Amount { get; set; }
 	}
 }
