@@ -66,7 +66,7 @@ using (StreamReader sr = new("dump.cs"))
 
                 for(string attr = sr.ReadLine(); attr != "}"; attr = sr.ReadLine())
                 {
-                    if(attr.Contains("[KeyAttribute]"))
+                    if(attr.Contains("[Key"))
                     {
                         codeBuilder.AppendLine($"\t\t[Key({attrIndex++})]");
                         var prop = sr.ReadLine();
@@ -121,9 +121,17 @@ using (StreamReader sr = new("dump.cs"))
 
         codeBuilder.AppendLine("namespace D4DJ_Tools.Masters\r\n{");
 
+        var prevLine = "";
+
         while (!sr.EndOfStream)
         {
             var line = sr.ReadLine();
+
+            if(prevLine == "// Namespace: UnityEngine"){
+                prevLine = "";
+                continue;
+            }
+
             var m = enumRE.Match(line);
 
             if (m.Success)
@@ -149,6 +157,7 @@ using (StreamReader sr = new("dump.cs"))
                     codeBuilder.AppendLine("\t}\r\n");
                 }
             }
+            prevLine = line;
         }
 
         codeBuilder.AppendLine("}");
