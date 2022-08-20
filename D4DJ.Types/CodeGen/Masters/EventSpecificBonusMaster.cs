@@ -19,20 +19,14 @@ namespace D4DJ_Tools.Masters
 		[Key(5)]
 		public int AllMatchPointBonusValue { get; set; }
 		[Key(6)]
-		public int CharacterMatchParameterBonusId { get; set; }
+		public int __CharacterMatchParameterBonusPrimaryKey__ { get; set; }
 		[Key(7)]
-		public int CharacterMatchParameterBonusValue { get; set; }
+		public int __AttributeMatchParameterBonusPrimaryKey__ { get; set; }
 		[Key(8)]
-		public int AttributeMatchParameterBonusId { get; set; }
+		public int __AllMatchParameterBonusPrimaryKey__ { get; set; }
 		[Key(9)]
-		public int AttributeMatchParameterBonusValue { get; set; }
-		[Key(10)]
-		public int AllMatchParameterBonusId { get; set; }
-		[Key(11)]
-		public int AllMatchParameterBonusValue { get; set; }
-		[Key(12)]
 		public int EventPointParameterBonusId { get; set; }
-		[Key(13)]
+		[Key(10)]
 		public int EventPointParameterBonusRate { get; set; }
 	}
 }

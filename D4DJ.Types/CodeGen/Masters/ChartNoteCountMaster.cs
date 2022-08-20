@@ -11,7 +11,9 @@ namespace D4DJ_Tools.Masters
 		[Key(1)]
 		public ChartSectionType Section { get; set; }
 		[Key(2)]
-		public int Count { get; set; }
+		public int NormalCount { get; set; }
+		[Key(3)]
+		public int SimpleCount { get; set; }
 	}
 }
 

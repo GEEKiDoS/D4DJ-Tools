@@ -46,6 +46,12 @@ namespace D4DJ_Tools.Masters
 		public int WayPoint5X { get; set; }
 		[Key(19)]
 		public int WayPoint5Y { get; set; }
+		[Key(20)]
+		public int CharacterId { get; set; }
+		[Key(21)]
+		public DateTime StartDate { get; set; }
+		[Key(22)]
+		public DateTime EndDate { get; set; }
 	}
 }
 

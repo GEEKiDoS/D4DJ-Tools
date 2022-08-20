@@ -1,44 +1,17 @@
 namespace D4DJ_Tools.Masters
 {
-	public enum EventType
+	public enum CampaignButtonDisplayLocation
 	{
-		MouseDown = 0,
-		MouseUp = 1,
-		MouseMove = 2,
-		MouseDrag = 3,
-		KeyDown = 4,
-		KeyUp = 5,
-		ScrollWheel = 6,
-		Repaint = 7,
-		Layout = 8,
-		DragUpdated = 9,
-		DragPerform = 10,
-		DragExited = 15,
-		Ignore = 11,
-		Used = 12,
-		ValidateCommand = 13,
-		ExecuteCommand = 14,
-		ContextClick = 16,
-		MouseEnterWindow = 20,
-		MouseLeaveWindow = 21,
-		mouseDown = 0,
-		mouseUp = 1,
-		mouseMove = 2,
-		mouseDrag = 3,
-		keyDown = 4,
-		keyUp = 5,
-		scrollWheel = 6,
-		repaint = 7,
-		layout = 8,
-		dragUpdated = 9,
-		dragPerform = 10,
-		ignore = 11,
-		used = 12,
+		Home = 1,
+		Club = 2,
+		Story = 4,
 	}
 
 	public enum CampaignCategory
 	{
 		Mileage = 1,
+		RaidUserExp = 2,
+		RaidUnitExp = 3,
 	}
 
 	public enum CardIllustType
@@ -55,6 +28,8 @@ namespace D4DJ_Tools.Masters
 		FeverSupport = 2,
 		ScoreUpWithDamage = 3,
 		AutoScoreUp = 4,
+		SupportableScoreUp = 11,
+		SupportableSkillLonger = 12,
 	}
 
 	public enum ClubItemSpotCategory
@@ -94,6 +69,8 @@ namespace D4DJ_Tools.Masters
 		DJBoothSetlistMaxCount = 307,
 		DJBoothGuestBookSetlistCount = 308,
 		DJBoothGuestBookHighScoreListCount = 309,
+		DJBoothSetlistLivePassMaxCount = 310,
+		DJBoothSetlistActiveLivePassMaxCount = 311,
 		NicknameMaxLength = 401,
 		CommentMaxLength = 402,
 		CardDeckNameMaxLength = 403,
@@ -101,10 +78,22 @@ namespace D4DJ_Tools.Masters
 		DJBoothSetlistTitleMaxLength = 405,
 		MusicFavoriteDeckNameMaxLength = 406,
 		DJBoothCommentMaxLength = 407,
+		LiveSEPresetNameMaxLength = 408,
 		VoltageMaxAllowCount = 501,
-		FirstTimeMusicId = 601,
+		ConvertedRewardHelpId = 601,
 		PrivateRoomCommentMaxLength = 701,
 		RaidEventHpMode = 801,
+		RaidEventSpecialBossHpMode = 802,
+		ClubOrderCharaShadow = 901,
+		ClubOrderDJChara = 902,
+		ClubOrderDJBooth = 903,
+		ClubOrderOtherChara = 904,
+		ClubOrderFrontChara = 905,
+		MusicTagMaxCount = 1001,
+		MusicTagNameMaxLenght = 1002,
+		MusicTagNeedLevel = 1003,
+		MusicRecommendCount = 1004,
+		EventSlotExtendableBonusTimeSeconds = 1100,
 	}
 
 	public enum ConditionCategory
@@ -130,6 +119,12 @@ namespace D4DJ_Tools.Masters
 		Tutorial = 9,
 	}
 
+	public enum BingoCardType
+	{
+		Normal = 0,
+		Special = 1,
+	}
+
 	public enum BingoRewardCategory
 	{
 		Bingo = 0,
@@ -137,12 +132,75 @@ namespace D4DJ_Tools.Masters
 		Complete = 2,
 	}
 
+	public enum EffectTargetType
+	{
+		None = 0,
+		Pick = 1,
+		All = 2,
+		Random = 3,
+	}
+
+	public enum EffectTypeOperator
+	{
+		None = 0,
+		Rate = 1,
+		Step = 2,
+	}
+
+	public enum GrowthBlockCategory
+	{
+		None = 0,
+		Red = 1,
+		Green = 2,
+		White = 3,
+		Condition = 4,
+		Character = 5,
+		Reward = 6,
+		VS = 7,
+	}
+
+	public enum GrowthBlockEffectType
+	{
+		None = 0,
+		TrainingExp = 1,
+		HeartExp = 2,
+		TechniqueExp = 3,
+		PhysicalExp = 4,
+		AllExp = 8,
+		DoubleEffect = 9,
+		LevelChange = 10,
+		TileChange = 11,
+		CharacterEffect = 12,
+		SendStock = 13,
+		LiveBattle = 14,
+	}
+
 	public enum EventAggregationType
 	{
 		MainAddPoint = 0,
 		Highscore = 1,
-		AddPoint = 2,
+		EngineSpecific = 2,
 		DailyAddPoint = 3,
+		CommonAddPoint = 4,
+		None = 99,
+	}
+
+	public enum EventEpisodeType
+	{
+		Normal = 0,
+		D4Fes1 = 1,
+		D4Fes2 = 2,
+	}
+
+	public enum EventType
+	{
+		None = 0,
+		Bingo = 1,
+		Medley = 2,
+		Poker = 3,
+		Raid = 4,
+		Slot = 5,
+		Growth = 6,
 	}
 
 	public enum PokerHandCategory
@@ -157,6 +215,12 @@ namespace D4DJ_Tools.Masters
 		TwoPair = 7,
 		OnePair = 8,
 		HighCard = 9,
+	}
+
+	public enum BossLoopType
+	{
+		Loop = 0,
+		FinalLoop = 1,
 	}
 
 	public enum SlotEffectPhase
@@ -201,6 +265,7 @@ namespace D4DJ_Tools.Masters
 	{
 		Normal = 0,
 		StepUp = 1,
+		Audition = 2,
 	}
 
 	public enum HonorType
@@ -217,10 +282,11 @@ namespace D4DJ_Tools.Masters
 		MenuCommon = 0,
 		LoginBonus = 1,
 		Mission = 2,
-		CharacterIntroduction = 3,
-		GachaMenu = 4,
-		BoxGacha = 5,
+		BoxGacha = 3,
+		BoxGachaDraw = 4,
+		BoxGachaJackpot = 5,
 		Training = 6,
+		BoxGachaReset = 7,
 	}
 
 	public enum ChartAchieveType
@@ -245,6 +311,25 @@ namespace D4DJ_Tools.Masters
 		Master = 4,
 	}
 
+	public enum LiveSECategory
+	{
+		None = 0,
+		Tap1 = 1,
+		Tap2 = 2,
+		SliderFlick = 3,
+		Scratch = 4,
+		TapEmpty = 5,
+		ScratchEmpty = 6,
+		LongLoop = 7,
+	}
+
+	public enum LiveSEPackCategory
+	{
+		SoundEffect = 1,
+		CharacterVoice = 2,
+		Collabo = 3,
+	}
+
 	public enum LoginBonusType
 	{
 		Common = 0,
@@ -254,6 +339,11 @@ namespace D4DJ_Tools.Masters
 		VipSilver = 4,
 		VipGold = 5,
 		VipPlatinum = 6,
+		EventBingo = 101,
+		EventMedley = 102,
+		EventPoker = 103,
+		EventRaid = 104,
+		EventSlot = 105,
 	}
 
 	public enum MapEventType
@@ -291,6 +381,9 @@ namespace D4DJ_Tools.Masters
 		Tutorial = 1,
 		Chart = 2,
 		TimeLimited = 3,
+		Daily = 4,
+		Weekly = 5,
+		Event = 6,
 	}
 
 	public enum ChartDifficulty
@@ -358,6 +451,10 @@ namespace D4DJ_Tools.Masters
 		Honor = 6,
 		Episode = 7,
 		Movie = 8,
+		DuplicateCard = 9,
+		EventPoint = 10,
+		LiveSEPack = 11,
+		Cloth = 12,
 	}
 
 	public enum StockCategory
@@ -374,7 +471,7 @@ namespace D4DJ_Tools.Masters
 		GachaTicket = 9,
 		Random = 10,
 		ParameterLevelUp = 11,
-		PassiveSkillExp = 12,
+		CardStack = 12,
 		Other = 99,
 	}
 

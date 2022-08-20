@@ -18,6 +18,12 @@ namespace D4DJ_Tools.Masters
 		public int MaxPlayableCount { get; set; }
 		[Key(5)]
 		public string BGM { get; set; }
+		[Key(6)]
+		public string BackgroundPrefabFileName { get; set; }
+		[Key(7)]
+		public int RecoveryStockId { get; set; }
+		[Key(8)]
+		public int RecoveryStockAmount { get; set; }
 	}
 }
 

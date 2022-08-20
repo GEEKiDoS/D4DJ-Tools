@@ -24,6 +24,14 @@ namespace D4DJ_Tools.Masters
 		public int[] __RouletteTargetsPrimaryKey__ { get; set; }
 		[Key(8)]
 		public int[] RouletteRates { get; set; }
+		[Key(9)]
+		public int[] BonusStockIds { get; set; }
+		[Key(10)]
+		public int[] BonusStockAmounts { get; set; }
+		[Key(11)]
+		public int ShareCashBackStockId { get; set; }
+		[Key(12)]
+		public int ShareCashBackPerStockCount { get; set; }
 	}
 }
 

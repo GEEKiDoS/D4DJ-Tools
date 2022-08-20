@@ -16,6 +16,10 @@ namespace D4DJ_Tools.Masters
 		public string PointTypeName { get; set; }
 		[Key(4)]
 		public string PointTypeIconName { get; set; }
+		[Key(5)]
+		public int EventPointRewardTemplateId { get; set; }
+		[Key(6)]
+		public int EventRankingRewardTemplateId { get; set; }
 	}
 }
 

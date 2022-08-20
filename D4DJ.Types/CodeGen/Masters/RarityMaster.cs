@@ -16,6 +16,8 @@ namespace D4DJ_Tools.Masters
 		public int[] LimitBreakBonuses { get; set; }
 		[Key(4)]
 		public int SealAmount { get; set; }
+		[Key(5)]
+		public int[] CardStackBonuses { get; set; }
 	}
 }
 

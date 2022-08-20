@@ -20,6 +20,8 @@ namespace D4DJ_Tools.Masters
 		public int[] Skins { get; set; }
 		[Key(6)]
 		public MapEventType EventType { get; set; }
+		[Key(7)]
+		public int[] SummerSkins { get; set; }
 	}
 }
 

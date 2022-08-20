@@ -21,23 +21,23 @@ namespace D4DJ_Tools.Masters
 		[Key(6)]
 		public string SkillName { get; set; }
 		[Key(7)]
-		public int[] MaxParameters { get; set; }
-		[Key(8)]
-		public string GachaMessage { get; set; }
-		[Key(9)]
-		public int ClothCardId { get; set; }
-		[Key(10)]
-		public int DebutOrder { get; set; }
-		[Key(11)]
-		public float[] CardIllustHeadDistanceY { get; set; }
-		[Key(12)]
-		public float[] CardIllustCenterDistanceX { get; set; }
-		[Key(13)]
-		public DateTime StartDate { get; set; }
-		[Key(14)]
-		public DateTime EndDate { get; set; }
-		[Key(15)]
 		public int __PassiveSkillPrimaryKey__ { get; set; }
+		[Key(8)]
+		public int[] MaxParameters { get; set; }
+		[Key(9)]
+		public string GachaMessage { get; set; }
+		[Key(10)]
+		public int ClothCardId { get; set; }
+		[Key(11)]
+		public int DebutOrder { get; set; }
+		[Key(12)]
+		public float[] CardIllustHeadDistanceY { get; set; }
+		[Key(13)]
+		public float[] CardIllustCenterDistanceX { get; set; }
+		[Key(14)]
+		public DateTime StartDate { get; set; }
+		[Key(15)]
+		public DateTime EndDate { get; set; }
 		[Key(16)]
 		public int GachaCardAttribute { get; set; }
 	}

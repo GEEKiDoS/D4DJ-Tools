@@ -26,6 +26,8 @@ namespace D4DJ_Tools.Masters
 		public int __CommandMasterPrimaryKey__ { get; set; }
 		[Key(9)]
 		public int HomePriority { get; set; }
+		[Key(10)]
+		public AchievementNotifyType NotifyType { get; set; }
 	}
 }
 

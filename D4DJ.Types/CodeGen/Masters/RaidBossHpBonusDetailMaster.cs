@@ -11,9 +11,11 @@ namespace D4DJ_Tools.Masters
 		[Key(1)]
 		public int BonusId { get; set; }
 		[Key(2)]
-		public int RewardStockId { get; set; }
+		public RewardCategory Category { get; set; }
 		[Key(3)]
-		public int RewardAmount { get; set; }
+		public int RewardId { get; set; }
+		[Key(4)]
+		public int Amount { get; set; }
 	}
 }
 

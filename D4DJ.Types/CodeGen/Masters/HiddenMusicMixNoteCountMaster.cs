@@ -13,7 +13,9 @@ namespace D4DJ_Tools.Masters
 		[Key(2)]
 		public ChartDifficulty Difficulty { get; set; }
 		[Key(3)]
-		public int Count { get; set; }
+		public int NormalCount { get; set; }
+		[Key(4)]
+		public int SimpleCount { get; set; }
 	}
 }
 

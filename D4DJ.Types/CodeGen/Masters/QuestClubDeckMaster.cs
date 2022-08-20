@@ -13,7 +13,7 @@ namespace D4DJ_Tools.Masters
 		[Key(2)]
 		public int __ItemPrimaryKey__ { get; set; }
 		[Key(3)]
-		public bool UseSpecialEffect { get; set; }
+		public int EffectIndex { get; set; }
 	}
 }
 
